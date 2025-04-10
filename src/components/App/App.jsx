@@ -4,12 +4,13 @@ import ContactList from "../ContactList/ContactList";
 import "./App.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "../../redux/contactsOps";
+import { fetchContacts } from "../../redux/contacts/contactsOps";
 import {
   selectContacts,
   selectError,
   selectLoading,
-} from "../../redux/contactsSlice";
+} from "../../redux/contacts/contactsSelectors";
+import { Route } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,10 @@ function App() {
 
   return (
     <div>
+      {/* <Route path="/" element={<HomePage />} />
+      <Route path="/register" element={<RegistrationPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/contacts" element={<ContactsPage />} /> */}
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
