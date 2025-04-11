@@ -1,0 +1,43 @@
+import { Field, Form, Formik } from "formik";
+import css from "./RegistrationForm.module.css";
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/operations";
+
+const RegistrationForm = () => {
+  const dispatch = useDispatch();
+
+  const handleSubmit = (value, action) => {
+    dispatch(register(value));
+    action.resetForm();
+  };
+
+  return (
+    <>
+      <Formik
+        initialValues={{
+          name: "",
+          email: "",
+          password: "",
+        }}
+        onSubmit={handleSubmit}
+      >
+        <Form className={css.form}>
+          <label className={css.label} htmlFor="name">
+            Name
+          </label>
+          <Field name="name" id="name" type="text" />
+          <label className={css.label} htmlFor="email">
+            Email
+          </label>
+          <Field name="email" id="email" type="email" />
+          <label className={css.label} htmlFor="password">
+            Password
+          </label>
+          <Field name="password" id="password" type="password" />
+          <button type="submit">Register</button>
+        </Form>
+      </Formik>
+    </>
+  );
+};
+export default RegistrationForm;
