@@ -9,6 +9,7 @@ const RegistrationForm = () => {
   const handleSubmit = (value, action) => {
     dispatch(register(value));
     action.resetForm();
+    console.log(value);
   };
 
   return (
