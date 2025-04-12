@@ -9,3 +9,8 @@
 .link.active {
   color: #e84a5f;
 }
+.icon {
+  color: #646cff;
+  font-size: 40px;
+  display: block;
+}
