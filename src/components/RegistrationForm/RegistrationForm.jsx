@@ -25,16 +25,23 @@ const RegistrationForm = () => {
           <label className={css.label} htmlFor="name">
             Name
           </label>
-          <Field name="name" id="name" type="text" />
+          <Field className={css.input} name="name" id="name" type="text" />
           <label className={css.label} htmlFor="email">
             Email
           </label>
-          <Field name="email" id="email" type="email" />
+          <Field className={css.input} name="email" id="email" type="email" />
           <label className={css.label} htmlFor="password">
             Password
           </label>
-          <Field name="password" id="password" type="password" />
-          <button type="submit">Register</button>
+          <Field
+            className={css.input}
+            name="password"
+            id="password"
+            type="password"
+          />
+          <button className={css.button} type="submit">
+            Register
+          </button>
         </Form>
       </Formik>
     </>

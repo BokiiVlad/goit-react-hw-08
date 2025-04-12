@@ -23,12 +23,19 @@ const LoginForm = () => {
         <label className={css.label} htmlFor="name">
           Name
         </label>
-        <Field name="name" type="text" id="name" />
+        <Field className={css.input} name="name" type="text" id="name" />
         <label className={css.label} htmlFor="password">
           Password
         </label>
-        <Field name="password" type="password" id="password" />
-        <button type="submit">Log In</button>
+        <Field
+          className={css.input}
+          name="password"
+          type="password"
+          id="password"
+        />
+        <button className={css.button} type="submit">
+          Log In
+        </button>
       </Form>
     </Formik>
   );
