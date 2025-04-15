@@ -2,6 +2,7 @@ import { createSelector, createSlice } from "@reduxjs/toolkit"
 import { fetchContacts, addContact, deleteContact } from "../contacts/operations"
 import { selectContacts } from "./selectors";
 import { selectNameFilter } from "../filters/selectors";
+import { logout } from "../auth/operations";
 
 
 export const selectFilteredContacts = createSelector([selectContacts, selectNameFilter], (task, filterValue) => {
@@ -20,7 +21,6 @@ const contactSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchContacts.pending, (state) => {
-            []
             state.loading = true;
         }).addCase(fetchContacts.fulfilled, (state, action) => {
             state.items = action.payload;
@@ -41,7 +41,10 @@ const contactSlice = createSlice({
         }).addCase(deleteContact.fulfilled, (state, action) => {
             state.items = state.items.filter((el) => el.id !== action.payload.id)
             state.loading = false;
+        }).addCase(logout.fulfilled, (state) => {
+            state.user = []
         })
+
 
     }
 })

@@ -1,7 +1,11 @@
 import "./App.css";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Layout from "../Layout/Layout";
 import { Route, Routes } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { refreshUser } from "../../redux/auth/operations";
+import { refreshPage } from "../../redux/auth/selectors";
+
 const RegistrationPage = lazy(() =>
   import("../../pages/RegistrationPage/RegistrationPage")
 );
@@ -12,7 +16,15 @@ const ContactsPage = lazy(() =>
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 
 function App() {
-  return (
+  const isRefreshing = useSelector(refreshPage);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <strong>Getting user data please wait...</strong>
+  ) : (
     <div>
       <Layout>
         <Suspense fallback={<div>Loading page ...</div>}>

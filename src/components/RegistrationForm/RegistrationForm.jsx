@@ -40,6 +40,7 @@ const RegistrationForm = () => {
             id="password"
             type="password"
           />
+
           <button className={css.button} type="submit">
             Register
           </button>

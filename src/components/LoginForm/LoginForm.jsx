@@ -14,16 +14,16 @@ const LoginForm = () => {
   return (
     <Formik
       initialValues={{
-        name: "",
+        email: "",
         password: "",
       }}
       onSubmit={handleSubmit}
     >
       <Form className={css.form}>
-        <label className={css.label} htmlFor="name">
-          Name
+        <label className={css.label} htmlFor="email">
+          Email
         </label>
-        <Field className={css.input} name="name" type="text" id="name" />
+        <Field className={css.input} name="email" type="text" id="email" />
         <label className={css.label} htmlFor="password">
           Password
         </label>

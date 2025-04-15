@@ -7,11 +7,15 @@ import { IoHomeSharp } from "react-icons/io5";
 const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <div>
+    <div className={css.wrapper}>
       <NavLink className={css.link} to="/">
         <IoHomeSharp className={css.icon} />
       </NavLink>
-      {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
+      {isLoggedIn && (
+        <NavLink className={css.link} to="/contacts">
+          Contacts
+        </NavLink>
+      )}
     </div>
   );
 };

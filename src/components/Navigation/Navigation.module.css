@@ -1,8 +1,9 @@
 .link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   padding: 12px;
-  font-weight: 700;
   color: #2a363b;
 }
 
@@ -10,7 +11,14 @@
   color: #e84a5f;
 }
 .icon {
-  color: #646cff;
+  color: black;
   font-size: 40px;
   display: block;
+}
+.icon:hover {
+  color: #646cff;
+}
+.wrapper {
+  display: flex;
+  gap: 12px;
 }
