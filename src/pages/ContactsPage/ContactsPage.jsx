@@ -9,6 +9,7 @@ import {
   selectError,
   selectLoading,
 } from "../../redux/contacts/selectors.js";
+import css from "./ContactsPage.module.css";
 
 function ContactsPage() {
   const dispatch = useDispatch();
@@ -23,11 +24,16 @@ function ContactsPage() {
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      {isLoading && <>Loading...</>}
-      {error && <>An error occurred...</>}
-      {contacts.length > 0 && <ContactList />}
+      <div className={css.formWrapper}>
+        <div>
+          <p>Add contact</p>
+          <ContactForm />
+          <SearchBox />
+        </div>
+        {isLoading && <>Loading...</>}
+        {error && <>An error occurred...</>}
+        {contacts.length > 0 && <ContactList />}
+      </div>
     </div>
   );
 }

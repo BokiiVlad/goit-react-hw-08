@@ -1,37 +1,46 @@
 .formField {
-  font-weight: 600;
-  margin-bottom: 30px;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  text-align: left;
-  gap: 10px;
+  width: 400px;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
+
 .formPiece {
   display: flex;
   flex-direction: column;
-}
-.inpField {
-  min-width: 400px;
-  height: 30px;
-  padding: 5px;
-  border: 1px inset black;
-  border-radius: 5px;
-}
-.searchBut {
-  outline: none;
-  margin-top: 20px;
-  align-self: center;
-  background-color: rgb(216, 221, 221);
-  max-height: 40px;
-  border: 1px solid rgb(65, 65, 65);
-  padding: 3px 15px;
+  gap: 8px;
 }
 
-.searchBut:focus {
-  outline: none;
+.inpField {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
-.searchBut:active {
+
+.inpField:focus {
+  border-color: #007bff;
   outline: none;
-  background-color: rgb(144, 146, 146);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.searchBut {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.searchBut:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }

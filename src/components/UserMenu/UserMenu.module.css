@@ -10,4 +10,14 @@
 .button {
   justify-content: center;
   margin-top: 0;
+  color: white;
+  background-color: #007bff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  border: none;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }

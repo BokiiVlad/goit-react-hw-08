@@ -1,12 +1,19 @@
-.findField {
-  margin-bottom: 20px;
-  min-width: 400px;
-  height: 30px;
-  padding: 5px;
-  border: 1px inset black;
-  border-radius: 5px;
-}
 .searchText {
-  font-weight: 600;
-  text-align: left;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.findField {
+  width: 422px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.findField:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
