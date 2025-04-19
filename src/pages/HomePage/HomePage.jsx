@@ -11,8 +11,7 @@ const HomePage = () => {
           This application was developed as part of the final project for the{" "}
           <strong>React + Redux Toolkit</strong> module in the{" "}
           <strong>GoIT course</strong>. It allows registered users to manage a
-          private collection of contacts: add, edit, delete, filter, and search
-          contacts by name or phone number.
+          private collection of contacts.
         </p>
 
         <h2>Key Features:</h2>
@@ -24,7 +23,7 @@ const HomePage = () => {
           </li>
           <li>Smart search functionality by name or phone number</li>
           <li>Contact editing</li>
-          <li>Deletion with confirmation</li>
+
           <li>
             User notifications for successful actions using toast messages
           </li>
