@@ -2,7 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import css from "./ContactForm.module.css";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
-
+import toast, { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
 
@@ -34,7 +34,10 @@ export default function ContactForm() {
       name: value.name,
       number: value.number,
     };
-    dispatch(addContact(newContact));
+    dispatch(addContact(newContact))
+      .unwrap()
+      .then(() => toast.success("Contact successfully created!"))
+      .catch(() => toast.error("Error, please reload the page."));
     actions.resetForm();
   };
 

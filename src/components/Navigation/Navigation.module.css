@@ -6,9 +6,8 @@
   padding: 12px;
   color: #2a363b;
 }
-
-.link.active {
-  color: #e84a5f;
+.link:hover {
+  color: #0056b3;
 }
 .icon {
   color: black;
@@ -16,7 +15,7 @@
   display: block;
 }
 .icon:hover {
-  color: #646cff;
+  color: #0056b3;
 }
 .wrapper {
   display: flex;

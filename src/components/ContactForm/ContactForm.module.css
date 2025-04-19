@@ -6,7 +6,7 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #e6f2ff;
 }
 
 .formPiece {
@@ -16,6 +16,7 @@
 }
 
 .inpField {
+  background-color: white;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -29,6 +30,7 @@
 }
 
 .searchBut {
+  margin-top: 15px;
   background-color: #007bff;
   color: white;
   padding: 10px 15px;

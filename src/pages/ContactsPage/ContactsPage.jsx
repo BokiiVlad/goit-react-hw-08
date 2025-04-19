@@ -30,9 +30,11 @@ function ContactsPage() {
           <ContactForm />
           <SearchBox />
         </div>
-        {isLoading && <>Loading...</>}
-        {error && <>An error occurred...</>}
-        {contacts.length > 0 && <ContactList />}
+        <div>
+          {isLoading && <p className={css.loadingText}>Loading...</p>}
+          {error && <>An error occurred...</>}
+          {contacts.length > 0 && <ContactList />}
+        </div>
       </div>
     </div>
   );

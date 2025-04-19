@@ -1,3 +1,10 @@
 .contactsList {
   padding: 0;
 }
+.title {
+  margin-left: 16px;
+  margin-bottom: 0;
+}
+.item {
+  min-width: 400px;
+}
